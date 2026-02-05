@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work - Victoria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="navbar">
+        <p>
+            <a class="m-2" href="index.html">About Me</a>
+            <a class="m-2" href="my-work.html">My Work</a>
+        </p>
+    </div>
+
+    <section class="m-3">
+        <header>
+            <h1>Victoria's Research Work</h1>
+        </header>
+
+        <main>
+            <article>
+                <h2>1. Nonlinear Dependence Detection Based on the Chatterjee ξ Coefficient</h2>
+                <p>I read the paper from <strong><em>Chatterjee, S. (2021)</strong>. A new coefficient of correlation. 
+                    Journal of the American Statistical Association, 116(536), 2009-2022. </em> </p>
+                <p>My main idea is to compare this newly-defined correlation coefficient with other classical measurements. 
+                    In order to do that, I conduct Monte-Carlo simulations to demonstrate its advantages in various aspects.</p>
+                
+            <h3>Research Steps</h3>
+                <ol>
+                    <li>Generate simulated data with different nonlinear relationships</li>
+                    <li>Calculate Chatterjee's coefficient and Pearson's r</li>
+                    <li>Conduct power analysis to compare performance</li>
+                    <li>Validate results with real-world datasets</li>
+                </ol>
+
+                <h3>Key Findings</h3>
+                <ul>
+                    <li>Chatterjee's coefficient has higher power in nonlinear cases</li>
+                    <li>Robust to outliers compared to Pearson's correlation</li>
+                    <li>Computationally efficient for large datasets</li>
+                </ul>
+
+                <h3>Performance Comparison</h3>
+                <table class="result-table">
+                    <tr>
+                        <th>Method</th>
+                        <th>Power (Nonlinear Case)</th>
+                        <th>Computational Time (s)</th>
+                    </tr>
+                    <tr>
+                        <td>Chatterjee's ξ</td>
+                        <td>0.92</td>
+                        <td>0.8</td>
+                    </tr>
+                    <tr>
+                        <td>Pearson</td>
+                        <td>0.45</td>
+                        <td>0.1</td>
+                    </tr>
+                    <tr>
+                        <td>Spearman</td>
+                        <td>0.78</td>
+                        <td>0.5</td>
+                    </tr>
+                </table>
+       
+                <p>Below are some of my simulation results.</p>
+                <img src="ξ Coefficient vs Pearson Correlation.png" alt="Simulation Results Plot" class="research-img">
+                <img src="FigC-3_SimulationD_Projection.png" alt="Simulation Results Plot" class="research-img">
+                <img src="FigC-1_SimulationA_StdBoxplot.png" alt="Simulation Results Plot" class="research-img">
+                
+                <p>I use a financial dataset from Kaggle to further understand the performance of ξ in real-world data and make comparison with other coefficents. </p>
+                
+                 <img src="FigC-5_Economic_TimeSeries_English.png" alt="Economic_TimeSeries Plot" class="research-img">
+                 
+                 <h3>Correlation Coefficient Comparison (Financial Dataset)</h3>
+                <table class="result-table">
+                    <tr>
+                        <th>Variable Pair</th>
+                        <th>Pearson Correlation</th>
+                        <th>Spearman Correlation</th>
+                        <th>ξ Coefficient</th>
+                    </tr>
+                    <tr>
+                        <td>Inflation vs Unemployment</td>
+                        <td>-0.41</td>
+                        <td>-0.49</td>
+                        <td>0.82</td>
+                    </tr>
+                    <tr>
+                        <td>GDP vs Unemployment</td>
+                        <td>-0.45</td>
+                        <td>-0.51</td>
+                        <td>0.82</td>
+                    </tr>
+                    <tr>
+                        <td>Inflation vs S&P 500</td>
+                        <td>0.92</td>
+                        <td>0.97</td>
+                        <td>0.95</td>
+                    </tr>
+                   
+                        <td>GDP vs S&P 500</td>
+                        <td>0.95</td>
+                        <td>0.98</td>
+                        <td>0.95</td>
+                     </tr>
+                </table>
+            <section class="dataset-download">
+                <a href="main.csv" download="economic_dataset.csv" class="download-btn">
+                  Download Financial Dataset 
+                </a>
+
+                <h3>Reference</h3>
+                <p>Chatterjee, S. (2020). <a href="https://doi.org/10.1080/01621459.2020.1758115">A new coefficient of correlation</a>, Journal of the American Statistical Association.</p>
+
+                <h3>Contact for Research Details</h3>
+                <p>Email: <a href="mailto:lchen699@wisc.edu">lchen699@wisc.edu</a></p>
+            </section> 
+            </article>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Victoria. All rights reserved.</p>
+        </footer>
+    </section>
+</body>
+</html>
